@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Console App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Banking Console App</h1>
+
+        <div id="accountMenu" class="menu">
+            <h2>Menu</h2>
+            <button onclick="showCreateAccountForm()">Create Account</button>
+            <button onclick="showAccessAccountForm()">Access Account</button>
+            <button onclick="exitApp()">Exit</button>
+        </div>
+
+        <div id="createAccountForm" class="form">
+            <h2>Create Account</h2>
+            <label for="accountHolder">Account Holder Name:</label>
+            <input type="text" id="accountHolder" required>
+            <label for="accountNumber">Account Number:</label>
+            <input type="text" id="accountNumber" required>
+            <button onclick="createAccount()">Create Account</button>
+            <button onclick="goBack()">Go Back</button>
+        </div>
+
+        <div id="accessAccountForm" class="form">
+            <h2>Access Account</h2>
+            <label for="accessAccountNumber">Account Number:</label>
+            <input type="text" id="accessAccountNumber" required>
+            <button onclick="accessAccount()">Access Account</button>
+            <button onclick="goBack()">Go Back</button>
+        </div>
+
+        <div id="accountDetails" class="form">
+            <h2>Account Menu</h2>
+            <div id="accountInfo"></div>
+            <button onclick="viewBalance()">View Balance</button>
+            <button onclick="deposit()">Deposit</button>
+            <button onclick="withdraw()">Withdraw</button>
+            <button onclick="viewTransactionHistory()">View Transaction History</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
